@@ -2,8 +2,6 @@
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge.
-
 The purpose of the analysis is to predict whether an individual loan is high-risk or healthy. This prediction is based on the following predictors:
 
     loan_size
@@ -18,7 +16,7 @@ Data from previous loanees is split in test and training data with the above pre
 
 As this is a two output clustering problem a simple logistic regression algorithm is fitted to the training data (58152 loans) and then the test data (19384 loans) is used to check the predictions made by the model.
 
-An accuracy value is then calculated i.e the percentage of data points of all data points that are correctly assigned to their true labels   
+An accuracy value is then calculated i.e the percentage of data points of all data points that are correctly assigned to their true labels 
 
 Additionally a confusion matrix is caluclated. This assigns the predictions from the test data to positive-positive, negative-negative, positive-negative and negative-positive results.
 
@@ -90,7 +88,7 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
            macro avg       0.92      0.99      0.95     19384
         weighted avg       0.99      0.99      0.99     19384
         
-        * Once the data had been re-sampled to equalise the number of healthy and high-risk loans in the training data sets the predictions changed slightly. The precision values remained the same but the recall values for predictions for high-risk loans went from 94% to 99%. This means that only 84% of the high-risk loans for identified as high-risk, out of the total sample size which is much larger both the healthy and high-risk loans were identified with an accuracy of 99%.
+        * Once the data had been re-sampled to equalise the number of healthy and high-risk loans in the training data sets  the predictions changed slightly. The precision values remained the same but the recall values for predictions for high-risk   loans went from 94% to 99%. This means that only 84% of the high-risk loans for identified as high-risk, out of the total sample size which   is much larger both the healthy and high-risk loans were identified with an accuracy of 99%.
 
     * confusion matrix results:
 
@@ -102,18 +100,12 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
         The confusion matrix shows that 18646 healthy loans (TN) and 615 high-risk loans (FP) were correctly identified from the test data. However, 119 healthy loans were incorrectly identified as high-risk (FP) and 4 high-risk loans were incorrectly identified as healthy (FN).           
 
 
-
-
 ## Summary
-
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
 
 The average loan size was $9805. We will do the following calculations using this as the loan size.
 
 In the first model the number of loans wrongly assumed as high-risk and therefore turned down (FP) was 107. This cost the bank interest on $1,049,135 on those loans. The high-risk loans that were wrongly assumed to be healthy (FN) were 37. This total loan amount was $362,785. So the total loss to the bank was the interest on the wrongly turned down loans (assume 6%) and the capital on the wrongly given high-risk loans. This works out to be a total cost to the bank of (0.06 x 1,049,135) + 362,785 = $425,733.
 
-In the second model the number of loans wrongly assumed as high risk and therefore turned down (FP) was 119. This cost the bank interest on $1,116,795 on those loans. The high-risk loans that were wrongly assumed to be healthy (FN) were 4. This total loan amount was  $39,220. So the total loss to the bank was the interest on the wrongly turned down loans (assume 6%) and the capital on the wrongly given high-risk loans. This works out to be a total cost to the bank of (0.06 x $1,116,795) + $39,220 = $106,228.
+In the second model the number of loans wrongly assumed as high risk and therefore turned down (FP) was 119. This cost the bank   interest on $1,116,795 on those loans. The high-risk loans that were wrongly assumed to be healthy (FN) were 4. This total loan amount   was  $39,220. So the total loss to the bank was the interest on the wrongly turned down loans (assume 6%) and the capital on the   wrongly given high-risk loans. This works out to be a total cost to the bank of (0.06 x $1,116,795) + $39,220 = $106,228.
 
 The oversampled method provides the better results. It is more important to the banks profitablity to reduce the number of  high-risk loans which are incorrectly identified as healthy rather than turning down good applicants incorrectly. So oversampling to identify high-risk loans at the expense of healthy loans works because it reduces the number of high-risk loans incorrectly identified.. 
