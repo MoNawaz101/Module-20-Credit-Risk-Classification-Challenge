@@ -53,27 +53,26 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
               macro avg       0.92      0.97      0.94     19384
            weighted avg       0.99      0.99      0.99     19384  
 
- * Precision is the ratio of correctly predicted positive observations to the total predicted positives i.e. precison = TP / (TP + FP). For the healthy class, the precision is 1.00, meaning that 100% of all instances predicted as healthy were actually healthy. For the high-risk class, the precision is 0.84, indicating that 84% of instances predicted as high-risk were actually high-risk.
+       * Precision is the ratio of correctly predicted positive observations to the total predicted positives i.e. precison = TP / (TP + FP). For the healthy class, the precision is 1.00, meaning that 100% of all instances predicted as healthy were actually healthy. For the high-risk class, the precision is 0.84, indicating that 84% of instances predicted as high-risk were actually high-risk.
 
-* Recall is the ratio of correctly predicted positive observations to the all observations in the actual class i.e. recall = TP / (TP + FN). For the healthy class, the recall is 0.99, meaning that 99% of healthy instances were correctly identified. For the high-risk class, the recall is 0.94, indicating that 94% of actual high-risk instances were correctly identified.
+        * Recall is the ratio of correctly predicted positive observations to the all observations in the actual class i.e. recall = TP / (TP + FN). For the healthy class, the recall is 0.99, meaning that 99% of healthy instances were correctly identified. For the high-risk class, the recall is 0.94, indicating that 94% of actual high-risk instances were correctly identified.
 
-* Support shows that there are 18,765 instances of healthy and 619 instances of high-risk in the test data.
+        * Support shows that there are 18,765 instances of healthy and 619 instances of high-risk in the test data.
 
-* Accuracy is the ratio of correctly predicted instances to the total instances in the dataset. In this case, the overall accuracy of the model is 0.99, which means that 99% of instances were classified correctly.
+        * Accuracy is the ratio of correctly predicted instances to the total instances in the dataset. In this case, the overall accuracy of the model is 0.99, which means that 99% of instances were classified correctly.
 
-* Macro average calculates the average for the healthy and high-risk instances for each of precision, recall, and F1-score, the macro average for precision, recall, and F1-score between 92 and 97%.
+        * Macro average calculates the average for the healthy and high-risk instances for each of precision, recall, and F1-score, the macro average for precision, recall, and F1-score between 92 and 97%.
 
-* Weighted average take the macro average and weights by the support. In this case, the weighted average precision, recall, and F1-score are all 99%.
+        * Weighted average take the macro average and weights by the support. In this case, the weighted average precision, recall, and F1-score are all 99%.
 
-* confusion matrix results:
+    * confusion matrix results:
 
-    array([[18658,   107],
-           [   37,   582]]
+        array([[18658,   107],
+               [   37,   582]]
     
-    TN = 18658, FP = 107, FN = 37, TP = 582
+        TN = 18658, FP = 107, FN = 37, TP = 582
            
-    The confusion matrix shows that 18658 healthy loans (TN because 0 is healthy) and 582 high-risk loans (TP as a high risk loan is 1) were correctly identified  from the test data. However, 37 high-risk loans were 
-    identified as healthy (FN) and 107 healthy loans were identified as high-risk (FP) incorrectly.           
+        The confusion matrix shows that 18658 healthy loans (TN because 0 is healthy) and 582 high-risk loans (TP as a high risk loan is 1) were correctly identified  from the test data. However, 37 high-risk loans were identified as healthy (FN) and 107 healthy loans were identified as high-risk (FP) incorrectly.           
 
 
 * Machine Learning Model 2:
@@ -91,16 +90,16 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
            macro avg       0.92      0.99      0.95     19384
         weighted avg       0.99      0.99      0.99     19384
         
-Once the data had been re-sampled to equalise the number of healthy and high-risk loans in the training data sets the predictions changed slightly. The precision values remained the same but the recall values for predictions for high-risk loans went from 94% to 99%. This means that only 84% of the high-risk loans for identified as high-risk, out of the total sample size which is much larger both the healthy and high-risk loans were identified with an accuracy of 99%.
+        * Once the data had been re-sampled to equalise the number of healthy and high-risk loans in the training data sets the predictions changed slightly. The precision values remained the same but the recall values for predictions for high-risk loans went from 94% to 99%. This means that only 84% of the high-risk loans for identified as high-risk, out of the total sample size which is much larger both the healthy and high-risk loans were identified with an accuracy of 99%.
 
-confusion matrix results:
+    * confusion matrix results:
 
-    array([[18646,   119],
-           [    4,   615]]
+        array([[18646,   119],
+               [    4,   615]]
            
-    TN = 18646, FP = 119, FN = 4, TP = 615
+        TN = 18646, FP = 119, FN = 4, TP = 615
   
-The confusion matrix shows that 18646 healthy loans (TN) and 615 high-risk loans (FP) were correctly identified from the test data. However, 119 healthy loans were incorrectly identified as high-risk (FP) and 4 high-risk loans were incorrectly identified as healthy (FN).           
+        The confusion matrix shows that 18646 healthy loans (TN) and 615 high-risk loans (FP) were correctly identified from the test data. However, 119 healthy loans were incorrectly identified as high-risk (FP) and 4 high-risk loans were incorrectly identified as healthy (FN).           
 
 
 
