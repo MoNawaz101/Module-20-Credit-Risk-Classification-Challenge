@@ -9,3 +9,6 @@
 * Jupyter notebook containing the Python code to train and test the logical regression model. The file contains two
   models. The first uses the data provided and the second re-samples the data to overtrain on high-risk loans.
 
+[report.md](report.md)
+* A markdown file which describes the analysis undertaken and the conclusions reached.
+
